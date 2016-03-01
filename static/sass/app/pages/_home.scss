@@ -1,0 +1,35 @@
+.product-map {
+  img {
+    max-width: 100%;
+  }
+  p {
+    margin: 2em 10px;
+  }
+}
+
+.story-block {
+  background: $white;
+  h3 {
+    margin: 0 0 20px 0;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+.recommend-product {
+  h3 { margin: 10px 0 0 0; }
+  .head {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  .product-block {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .story-block {
+    text-align: center;
+  }
+}

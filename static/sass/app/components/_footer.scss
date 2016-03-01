@@ -1,0 +1,32 @@
+footer {
+  background-color: $grey;
+  color: #ccc;
+  padding: 40px 0 20px 0;
+  font-size: 0.8em;
+  a {
+    color: #ccc;
+  }
+  ul li {
+    padding: 5px 0;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  .copyright {
+    margin-top: 20px;
+    border-top: 1px solid;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .footer-menu {
+    .col-sm-6.col-xs-6:nth-child(odd) {
+      clear: left;
+    }
+    h5 {
+      color: $white;
+    }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

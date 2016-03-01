@@ -1,0 +1,13 @@
+.faq-list {
+  li {
+    padding: 10px 0;
+    p {
+      display: none;
+    }
+    h4 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      cursor: pointer;
+    }
+  }
+}

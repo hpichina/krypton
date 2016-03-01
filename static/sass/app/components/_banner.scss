@@ -1,0 +1,33 @@
+.hero-banner {
+  padding: 10em 0;
+  background-image: url('../images/banner-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: $white;
+  text-align: center;
+  h1 {
+    font-size: 4em;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  &.banner--1 {
+    background-image: url('../images/banner-2.png');
+    background-position: center;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .hero-banner {
+    padding: 8em 0;
+  }
+}
+
+@media (max-width: $tablet) {
+  .hero-banner {
+    padding: 4em 0;
+    h1 {
+      font-size: 3em;
+    }
+  }
+}

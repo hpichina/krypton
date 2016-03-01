@@ -3,5 +3,6 @@ main:
   css:
     base:
       static/css/main.css: {}
+      static/css/app/main.css: {}
   js:
       static/js/main.js: {}

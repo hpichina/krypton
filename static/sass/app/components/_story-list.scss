@@ -1,0 +1,18 @@
+.story-list {
+  .image-wrapper {
+    background-image: url('../images/bee-1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 40px;
+    color: $white;
+    h1, h2, h3, h4 {
+      color: $white;
+    }
+    &.image-2 {
+      background-image: url('../images/banner-1.jpg');
+    }
+  }
+  li {
+    min-height: 300px;
+  }
+}

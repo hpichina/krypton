@@ -1,0 +1,23 @@
+.search-box {
+  padding: 15px;
+  position: relative;
+  input {
+    border-radius: 15px;
+    border: 1px solid $text;
+    color: $text;
+    font-size: 0.8em;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px 0 25px;
+    width: 180px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .icon-search {
+    font-size: 15px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+  }
+}
