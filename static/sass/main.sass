@@ -1,21 +1,21 @@
-// Does imports from the base fortytwo theme.
-@import "lib/_basicimports"
+@import "base/bootstrap"
+@import "base/fontello"
 
-// Import icomoon array.
-@import "lib/_icomoon"
+/* include bases */
+@import "base/variables"
+@import "base/base"
 
-// Put your own mixins in this file
-@import "lib/_mixins.sass"
+/* components */
+@import "components/navigation"
+@import "components/image-list"
+@import "components/story-list"
+@import "components/faq-list"
+@import "components/search"
+@import "components/banner"
+@import "components/footer"
+@import "components/tab"
 
-@import "assets/_pageelements"
-
-// Basic layout styling
-@import "base/_layout"
-@import "base/_header"
-@import "base/_footer"
-@import "base/_navigation"
-@import "base/_sidebars"
-@import "base/_tabs"
-
-// Specific page styling
-@import "pages/_home"
+/* pages */
+@import "pages/home"
+@import "pages/landing"
+@import "pages/detail"

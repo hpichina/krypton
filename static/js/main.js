@@ -1,23 +1,45 @@
-(function ($, Drupal, window, document, undefined) {
+(function($) {
+  
+  function init_tabs() {
+    $('.tab a').click(function() {
+      console.log('clicking tab');
+      var content = '.' + $(this).attr('data-tab');
+      $('.tab-content').not(content).hide();
+      $(content).fadeIn();
+      var $li = $(this).parent();
+      $li.siblings().removeClass('active');
+      $li.addClass('active');
+    })
+  }
 
-  Drupal.behaviors.app = {
-    attach: function (context, settings) {
-      constants = Drupal.behaviors.fortytwoMain.constants;
+  function init_nav() {
+    var page = $('body').attr('data-page') || 'index';
+    $('.nav li[data-page="' + page + '"]').addClass('active');
+  }
 
-      // Store responsive type
-      var body = $('body');
-      if (body.hasClass('layout-adaptive')) constants.LAYOUT = {
-        fluid: false,
-        adaptive: true
-      };
-      else if (body.hasClass('layout-fluid')) constants.LAYOUT = {
-        fluid: true,
-        adaptive: false
-      };
+  function init_faq() {
+    $('.faq-list li h4').click(function() {
+      $(this).next().slideToggle();
+    });
+  }
 
-      // Transit.js will fallback to frame based animation when transitions aren't supported
-      // if( !$("html").hasClass( "csstransitions" )) $.fn.transition = $.fn.animate;
-    }
-  };
+  function init_page_nav() {
+    $('.page-nav a').click(function(e) {
+      e.preventDefault();
+      var ele = $(this).attr('href');
 
-})(jQuery, Drupal, this, this.document);
+      $('html, body').animate({
+          scrollTop: $(ele).offset().top
+      }, 500);
+    });
+  }
+
+  $(document).ready(function() {
+    console.log('initializing');
+    init_nav();
+    init_tabs();
+    init_faq();
+    init_page_nav();
+  });
+
+})(jQuery || window.jQuery);
