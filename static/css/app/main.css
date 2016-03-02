@@ -1991,6 +1991,10 @@ h3.with-line {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px; }
 
+/* --- */
+header {
+  margin: 0; }
+
 /* components */
 .nav {
   height: 64px;
@@ -2004,7 +2008,7 @@ h3.with-line {
       text-decoration: none;
       background-color: #f7cf64;
       color: #915a44; }
-  .nav li.active a {
+  .nav li a.is-active {
     background-color: #f4c034;
     color: #915a44; }
 

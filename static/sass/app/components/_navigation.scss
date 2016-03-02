@@ -13,9 +13,7 @@
         color: $text;
       }
     }
-  }
-  li.active {
-    a {
+    a.is-active {
       background-color: $primary;
       color: $text;
     }
