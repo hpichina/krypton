@@ -48,14 +48,14 @@
 
 
 <header>
-  {{ page.header }}
+    <nav>
+        <div class="container">
+            <div class="row">
+                {{ page.header }}
+            </div>
+        </div>
+    </nav>
 </header>
-
-{% if page.navigation %}
-  <div class="navigation">
-    {{ page.navigation }}
-  </div>
-{% endif %}
 
 <div class="wrapper">
   {{ page.breadcrumb }}
@@ -99,3 +99,7 @@
     {% endif %}
   </footer>
 {% endif %}
+
+{{ dump(_context | keys)}}
+
+---
