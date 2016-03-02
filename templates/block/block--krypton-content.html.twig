@@ -1,0 +1,23 @@
+<section class="hero-banner">
+    <div class="container">
+        <h1>海惠·国际小母牛</h1>
+        <p>连接乡村与城市</p>
+    </div>
+</section>
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
