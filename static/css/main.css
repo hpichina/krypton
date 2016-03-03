@@ -2080,6 +2080,8 @@ h3.with-line {
     width: 180px; }
     .search-box input:focus {
       outline: none; }
+    .search-box input[type=submit] {
+      display: none; }
   .search-box .icon-search {
     font-size: 15px;
     left: 20px;

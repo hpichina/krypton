@@ -13,6 +13,9 @@
     &:focus {
       outline: none;
     }
+    &[type=submit] {
+      display: none;
+    }
   }
   .icon-search {
     font-size: 15px;
