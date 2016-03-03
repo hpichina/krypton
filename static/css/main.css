@@ -2004,9 +2004,9 @@ h3.with-line {
       text-decoration: none;
       background-color: #f7cf64;
       color: #915a44; }
-  .nav li.active a {
-    background-color: #f4c034;
-    color: #915a44; }
+    .nav li a.is-active {
+      background-color: #f4c034;
+      color: #915a44; }
 
 .image-list {
   list-style: none;

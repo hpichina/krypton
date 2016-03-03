@@ -12,12 +12,10 @@
         background-color: lighten($primary, 10%);
         color: $text;
       }
-    }
-  }
-  li.active {
-    a {
-      background-color: $primary;
-      color: $text;
+      &.is-active {
+        background-color: $primary;
+        color: $text;
+      }
     }
   }
 }
