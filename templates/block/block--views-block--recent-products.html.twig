@@ -1,18 +1,12 @@
-<section class="product-lists">
-  <div class="container page-block">
-    <!-- Filter -->
-
-    <div class="head">
-      <h3>
-        <i class="icon-star-filled"></i>
-        <span>{{ label }}</span>
-      </h3>
-    </div>
-    <ul class="row image-list product-list">
-    </ul>
-    {{ content }}
-  </div>
-<section>
+<div class="head">
+  <h3>
+  <i class="icon-star-filled"></i>
+  <span>{{ label }}</span>
+  </h3>
+</div>
+<ul class="row image-list product-list">
+</ul>
+{{ content }}
 
 <p>{{ dump(content | keys) }}</p>
 <p>{{ dump(content["#view"] | keys) }}</p>
