@@ -5,8 +5,9 @@
   </h3>
 </div>
 <ul class="row image-list product-list">
+  {% for row in content["view_build"]["#rows"][0]["#rows"] %}
+    <li class="col-md-3 col-sm-6 col-xs-12">
+      {{ row }}
+    </li>
+  {% endfor %}
 </ul>
-{{ content }}
-
-<p>{{ dump(content | keys) }}</p>
-<p>{{ dump(content["#view"] | keys) }}</p>
