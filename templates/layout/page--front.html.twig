@@ -1,0 +1,57 @@
+<header>
+    <nav>
+        <div class="container">
+            <div class="row">
+                {{ page.header }}
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="wrapper">
+  <section class="content column">
+    {% if messages %}
+      <div class="messages">
+        {{ messages }}
+      </div>
+    {% endif %}
+    {{ page.help }}
+
+    {% if page.highlighted %}
+      <div class="highlighted">{{ page.highlighted }}</div>
+    {% endif %}
+
+    <a id="main-content"></a>
+
+    {{ page.content.krypton_content }}
+    
+    <section class="recommend-product">
+      <div class="container page-block">
+        <div class="row head">
+          <div class="col-md-10">
+            <h3>
+              <i class="icon-star-circled"></i>
+              <span>产品推荐</span>
+            </h3>
+          </div>
+          <div class="col-md-2 text-right">
+            <a href="product-landing.html" class="btn btn-primary">更多农产品信息</a>
+          </div>
+        </div>
+        {{ page.content.views_block__recommend_product }}
+      </div>
+    </section>
+  </section>
+
+</div>
+
+{{ dump(page.content | keys) }}<br>
+
+{% if page.footer or theme_credit %}
+  <footer>
+    {{ page.footer }}
+    {% if theme_credit %}
+      <div class = "theme-credit">{{ theme_credit }}</div>
+    {% endif %}
+  </footer>
+{% endif %}
