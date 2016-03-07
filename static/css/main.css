@@ -1991,6 +1991,9 @@ h3.with-line {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px; }
 
+.thumbnail img {
+  max-height: 224px; }
+
 /* components */
 .nav {
   height: 64px;
