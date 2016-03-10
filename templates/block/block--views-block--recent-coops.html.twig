@@ -1,0 +1,26 @@
+<section class="recommend-product">
+  <div class="container page-block">
+    <div class="row head">
+      <div class="col-md-10">
+        <h3>
+          <i class="home"></i>
+          <span>{{ label }}</span>
+        </h3>
+      </div>
+      <div class="col-md-2 text-right">
+        <a href="/coops_landing" class="btn btn-primary">更多合作社信息</a>
+      </div>
+    </div>
+    <ul class="row image-list coop-list">
+      {% for row in content["view_build"]["#rows"][0]["#rows"] %}
+        {% if loop.index0 % 4 == 0 and loop.index0 != 0 %}
+    </ul>
+    <ul class="row image-list product-list">
+        {% endif %}
+      <li class="col-md-4 col-sm-6 col-xs-12">
+        {{ row }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

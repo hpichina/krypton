@@ -1,0 +1,5 @@
+{% if element["#items"].0.summary | length > 0 %}
+  {{ element["#items"].0.summary | trim | slice(0, 80) }}
+{% else %}
+  {{ element["#items"].0.value | trim | slice(0, 80) }}
+{% endif %}
