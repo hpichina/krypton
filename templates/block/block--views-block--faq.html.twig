@@ -1,0 +1,12 @@
+<section>
+    <div class="container page-block">
+        <ul class="row faq-list">
+            {% for item in content.view_build["#rows"].0["#rows"] %}
+                <li>
+                    {{ item }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>    
+            
