@@ -17,12 +17,95 @@
     </div>
     <div class="col-md-5 col-xs-12 col-md-offset-1">
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="col-md-8 col-sm-6 col-xs-6">
                 {{ content.field_contact_info }}
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                {{ content.field_follow_info }}
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <h5>联系我们</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="icon-wechat"></i>
+                        <a id="wechat-link">关注微信</a>
+                    </li>
+                    <li>
+                        <i class="icon-weibo"></i>
+                        {{ content.field_weibo_link }}
+                    </li>
+                </ul>
             </div>
+        </div>
+        <style>
+            #weiLayer { 
+                border: 1px solid #d9d9d9;
+                padding: 20px 20px 12px;
+                color: #595959;
+                width: 330px;
+                position: absolute; 
+                bottom: 70px;
+                right: 123px;
+                background: #fff;
+                text-align: left; 
+                cursor: auto; 
+                display: none
+            }
+            .weiLayer h3 {
+                font-weight: 700;
+                text-align:left;
+                margin:0;
+                font-size:14px;
+                line-height:20px;
+                padding-bottom:4px;
+                color: initial
+            }
+            .weiLayer p{line-height:20px}
+            .weiLayer .erweima{
+                width:103px;
+                height:103px;
+                margin:0 20px 6px 0;
+                float:left;
+            }
+            .weiLayer .line{
+                clear:both;margin:6px 0
+            }
+            .weiLayer .triangle {
+                width: 0;
+                height: 0;
+                border-width: 8px;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+                position:absolute;
+                bottom:-16px;
+                right:8px;
+            }
+            #weiLayer a.close{
+                background:url(http://img.58cdn.com.cn/ui6/index/indexIcon.jpg) no-repeat -73px 0;
+                position:absolute;
+                top:9px;
+                right:9px;
+                width:19px;
+                height:19px;
+                text-indent:-99em;
+                overflow:hidden;
+                display:block;
+                margin:0
+            }
+            #weiLayer a.close:hover {
+                background-position:-73px -20px
+            }
+            .orange {
+                color: #ff8622
+            }
+        </style>
+        <div class="weiLayer" id="weiLayer">
+            <a id="hide-wechat-link" class="close" target="_self">关闭</a>
+            <div class="erweima">{{ content.field_wechat_image }}</div>
+            <div class="erTxt">
+                <h3>轻松加微信：</h3>
+                <p>1、打开微信<br>2、点击底部菜单“发现”<br>3、选择“扫一扫”功能，<br>4、对准左方二维码即可关注</p>
+            </div>
+            <div class="line"></div>
+            <div>微信号：<span class="orange">{{ content.field_wechat_id }}</span></div>
+            <div class="triangle"></div>
         </div>
     </div>
 </div>
