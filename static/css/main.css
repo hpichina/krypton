@@ -2005,6 +2005,9 @@ h3.with-line {
   padding-bottom: -30px;
   margin-bottom: -30px; }
 
+.view-filters {
+  display: none; }
+
 /* components */
 .nav {
   height: 64px;
