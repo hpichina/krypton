@@ -2000,6 +2000,11 @@ h3.with-line {
 .coop-list li {
   min-height: 400px; }
 
+.anti-page-block {
+  padding-top: 30px;
+  padding-bottom: -30px;
+  margin-bottom: -30px; }
+
 /* components */
 .nav {
   height: 64px;

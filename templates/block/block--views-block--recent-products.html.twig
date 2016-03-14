@@ -1,13 +1,5 @@
-<div class="head">
-  <h3>
-  <i class="icon-star-filled"></i>
-  <span>{{ label }}</span>
-  </h3>
-</div>
-<ul class="row image-list product-list">
-  {% for row in content["view_build"]["#rows"][0]["#rows"] %}
-    <li class="col-md-3 col-sm-6 col-xs-12">
-      {{ row }}
-    </li>
-  {% endfor %}
-</ul>
+{% extends "block--views-block--products-base.html.twig" %}
+
+{% block icon %}
+    <i class="icon-star-filled"></i>
+{% endblock %}

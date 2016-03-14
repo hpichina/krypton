@@ -1,11 +1,15 @@
-<div class="row">
-  <div class="col-md-10 col-xs-12">
-    <ul class="list-inline">
-      {% for row in content["view_build"]["#rows"][0]["#rows"] %}
-        <li>
-          {{ row }}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+<section class="product-lists">
+    <div class="container anti-page-block">
+        <div class="row">
+            <div class="col-md-10 col-xs-12">
+                <ul class="list-inline">
+                {% for row in content["view_build"]["#rows"][0]["#rows"] %}
+                    <li>
+                    {{ row }}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
