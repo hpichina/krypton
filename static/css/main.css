@@ -1997,6 +1997,9 @@ h3.with-line {
 .product-list li {
   min-height: 400px; }
 
+.coop-list li {
+  min-height: 400px; }
+
 /* components */
 .nav {
   height: 64px;
