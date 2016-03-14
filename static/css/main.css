@@ -1994,6 +1994,9 @@ h3.with-line {
 .thumbnail img {
   max-height: 224px; }
 
+.product-list li {
+  min-height: 400px; }
+
 /* components */
 .nav {
   height: 64px;
@@ -2161,6 +2164,18 @@ footer {
       border-left: 3px solid #00aea1; }
       .tabs .tab.active a {
         color: #00aea1; }
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px, 0;
+  border-radius: 4px; }
+  .pagination li {
+    display: inline; }
+  .pagination li:first-child > a, .pagination li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
 
 /* pages */
 .product-map img {
