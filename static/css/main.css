@@ -2008,6 +2008,9 @@ h3.with-line {
 .view-filters {
   display: none; }
 
+.eclipse p:after {
+  content: '...'; }
+
 /* components */
 .nav {
   height: 64px;
