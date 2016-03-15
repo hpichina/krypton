@@ -1,0 +1,17 @@
+{% extends "page.html.twig" %}
+
+{% block content %}
+    <style>
+        .search-result .search-form {
+            background-color: #f1f1f1;
+            padding: 30px 100px;
+        }
+        .search-result h2 {
+            padding: 32px 0 0 120px;
+        }
+
+    </style>
+    <div class="search-result">
+        {{ page.content }}
+    </div>
+{% endblock %}

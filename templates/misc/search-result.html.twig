@@ -1,0 +1,9 @@
+<article class="search-result-item" style="margin-bottom: 20px">
+    <h4>
+        <a {% if url %}href="{{ url }}"{% endif %}>
+            {{ title }}
+        </a>
+    <h4>
+    <small>类型：{{ result.type }}</small>
+    <p>{{ result.node.body.0.value }}</p>
+</article>
