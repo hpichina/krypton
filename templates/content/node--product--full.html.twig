@@ -1,0 +1,34 @@
+<section class="hero-banner" style="background-image: url('{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}');">
+  <div class="container">
+    {{ content.field_page_banner_text }}
+  </div>
+</section>
+
+<section>
+    <div class="container page-block">
+        <div class="page-nav text-center">
+            <div class="ul list-inline">
+                <li><a href="#detail">产品描述</a></li>
+                <li><a href="#season">数量级/季节</a></li>
+                <li><a href="#production">生产方式</a></li>
+                <li><a href="#transport">包装/运输/储存</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </div>
+        </div>
+        <div id="detail" class="detail-block">
+            {{ content.body }}
+        </div>
+        <div id="season" class="detail-block">
+            {{ content.field_product_season }}
+        </div>
+        <div id="production" class="detail-block">
+            {{ content.field_product_production }}
+        </div>
+        <div id="transport" class="detail-block">
+            {{ content.field_product_transport }}
+        </div>
+        <div id="contact" class="detail-block">
+            {{ content.field_product_contact }}
+        </div>
+    </div>
+</section>
