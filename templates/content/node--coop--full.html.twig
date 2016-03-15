@@ -1,0 +1,26 @@
+<section class="hero-banner" style="background-image: url('{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}');">
+  <div class="container">
+    {{ content.field_page_banner_text }}
+  </div>
+</section>
+
+<section>
+    <div class="container page-block">
+        <div class="page-nav text-center">
+            <div class="ul list-inline">
+                <li><a href="#product">农产品</a></li>
+                <li><a href="#detail">合作社介绍</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </div>
+        </div>
+        <div id="product" class="detail-block">
+            {{ content.coop_products }}
+        </div>
+        <div id="detail" class="detail-block">
+            {{ content.body }}
+        </div>
+        <div id="contact" class="detail-block">
+            {{ content.field_coop_contact }}
+        </div>
+    </div>
+</section>
