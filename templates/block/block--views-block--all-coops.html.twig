@@ -1,16 +1,5 @@
-<style>
-.view-filters {
-    display: none;
-}
-</style>
-<section class="product-lists">
-    <div class="container page-block">
-        <div class="head">
-        <h3>
-            <i class="icon-basket"></i>
-            <span>{{ label }}</span>
-        </h3>
-        </div>
-        {{ content }}
-    </div>
-</section>
+{% extends "block--views-block--coops-base.html.twig" %}
+
+{% block icon %}
+    <i class="icon-basket"></i>
+{% endblock %}
