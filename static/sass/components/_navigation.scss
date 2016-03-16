@@ -1,10 +1,14 @@
 .nav {
-  height: 64px;
   line-height: 64px;
   margin-bottom: 0;
   li {
+    padding-left: 0;
+    padding-right: 0;
     a {
-      padding: 8px 20px;
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      width: 100px;
       border-radius: 5px;
       transition: all .3s;
       &:hover {
