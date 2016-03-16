@@ -33,5 +33,8 @@
 @media (min-width: $tablet) {
   .search-box {
     padding-top: 0;
+    .icon-search{
+      top: 5px;
+    }
   }
 }
