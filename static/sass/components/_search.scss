@@ -30,7 +30,7 @@
 
 
 
-@media (min-width: $tablet) {
+@media (max-width: $tablet) {
   .search-box {
     padding-top: 0;
     .icon-search{
