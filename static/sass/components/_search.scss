@@ -1,6 +1,7 @@
 .search-box {
   padding: 15px;
   position: relative;
+  text-align: right;
   input {
     border-radius: 15px;
     border: 1px solid $text;
@@ -9,7 +10,9 @@
     height: 30px;
     line-height: 30px;
     padding: 0 10px 0 25px;
-    width: 180px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
     &:focus {
       outline: none;
     }
@@ -22,5 +25,16 @@
     left: 20px;
     position: absolute;
     top: 20px;
+  }
+}
+
+
+
+@media (min-width: $tablet) {
+  .search-box {
+    padding-top: 0;
+    .icon-search{
+      top: 5px;
+    }
   }
 }
