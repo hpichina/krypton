@@ -49,6 +49,8 @@ h3.with-line {
 
 .product-list > li {
   min-height: 400px;
+  max-height:400px;
+  overflow: hidden;
 }
 
 .coop-list > li {
