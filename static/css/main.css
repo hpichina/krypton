@@ -1991,13 +1991,7 @@ h3.with-line {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px; }
 
-.thumbnail img {
-  max-height: 224px; }
-
-.product-list li {
-  min-height: 400px; }
-
-.coop-list li {
+.coop-list > li {
   min-height: 400px; }
 
 .anti-page-block {
@@ -2010,20 +2004,25 @@ h3.with-line {
 
 /* components */
 .nav {
-  height: 64px;
   line-height: 64px;
   margin-bottom: 0; }
-  .nav li a {
-    padding: 8px 20px;
-    border-radius: 5px;
-    transition: all .3s; }
-    .nav li a:hover {
-      text-decoration: none;
-      background-color: #f7cf64;
-      color: #915a44; }
-    .nav li a.is-active {
-      background-color: #f4c034;
-      color: #915a44; }
+  .nav li {
+    padding-left: 0;
+    padding-right: 0; }
+    .nav li a {
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      width: 100px;
+      border-radius: 5px;
+      transition: all .3s; }
+      .nav li a:hover {
+        text-decoration: none;
+        background-color: #f7cf64;
+        color: #915a44; }
+      .nav li a.is-active {
+        background-color: #f4c034;
+        color: #915a44; }
 
 .image-list {
   list-style: none;
@@ -2074,6 +2073,18 @@ h3.with-line {
 .story-list li {
   min-height: 300px; }
 
+@media (max-width: 991px) {
+  .product-list > li {
+    min-height: 416px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .product-list > li {
+    min-height: 497px; } }
+
+@media (min-width: 1200px) {
+  .product-list > li {
+    min-height: 436px; } }
+
 .faq-list li {
   padding: 10px 0; }
   .faq-list li p {
@@ -2085,7 +2096,8 @@ h3.with-line {
 
 .search-box {
   padding: 15px;
-  position: relative; }
+  position: relative;
+  text-align: right; }
   .search-box input {
     border-radius: 15px;
     border: 1px solid #915a44;
@@ -2094,7 +2106,9 @@ h3.with-line {
     height: 30px;
     line-height: 30px;
     padding: 0 10px 0 25px;
-    width: 180px; }
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box; }
     .search-box input:focus {
       outline: none; }
     .search-box input[type=submit] {
@@ -2104,6 +2118,12 @@ h3.with-line {
     left: 20px;
     position: absolute;
     top: 20px; }
+
+@media (min-width: 768px) {
+  .search-box {
+    padding-top: 0; }
+    .search-box .icon-search {
+      top: 5px; } }
 
 .hero-banner {
   padding: 10em 0;
@@ -2120,15 +2140,15 @@ h3.with-line {
     background-image: url("../images/banner-2.png");
     background-position: center; }
 
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 1em 0; }
+    .hero-banner h1 {
+      font-size: 3em; } }
+
 @media (min-width: 768px) and (max-width: 992px) {
   .hero-banner {
     padding: 8em 0; } }
-
-@media (max-width: 768px) {
-  .hero-banner {
-    padding: 4em 0; }
-    .hero-banner h1 {
-      font-size: 3em; } }
 
 footer {
   background-color: #323232;

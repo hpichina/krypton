@@ -1,0 +1,17 @@
+@media (max-width: $screen-sm-max) {
+    .product-list > li {
+        min-height: 416px;
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .product-list > li {
+        min-height: 497px;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .product-list > li {
+        min-height: 436px;
+    }
+}
