@@ -43,15 +43,11 @@ h3.with-line {
   padding-bottom: 10px;
 }
 
-.thumbnail img {
-  max-height: 224px;
-}
-
-.product-list li {
+.product-list > li {
   min-height: 400px;
 }
 
-.coop-list li {
+.coop-list > li {
   min-height: 400px;
 }
 
@@ -65,6 +61,3 @@ h3.with-line {
     display: none;
 }
 
-.eclipse p:after {
-    content: '...'
-}

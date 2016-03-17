@@ -3,3 +3,12 @@
  * @file
  * krypton theme implementation file.
  */
+
+function krypton_preprocess_node(&$variables){
+//   $stuff  = views_embed_view('recommend_products', 'embed_1', 28);
+//   $variables["my_view"] = drupal_render($stuff);
+  
+//   $query = \Drupal::entityQuery('node')->condition('#type', 'product')->execute();
+//   $variables["product_query"] = $query;
+
+}
