@@ -10,5 +10,4 @@ function krypton_preprocess_node(&$variables){
   
 //   $query = \Drupal::entityQuery('node')->condition('#type', 'product')->execute();
 //   $variables["product_query"] = $query;
-
 }

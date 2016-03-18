@@ -1,3 +1,4 @@
-<a href="{{ items.0.content['#url'] }}">
-  {{ items.0.content["#title"] }}
-</a>
+{{ path.current }}
+<a {% if items.0.content['#url'] == path('<current>') %}class="is-active"{% endif %}
+    href="{{ items.0.content['#url'] }}">{{ items.0.content["#title"] }}</a>
+    
