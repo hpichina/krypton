@@ -2097,6 +2097,9 @@ h3.with-line {
 .btn-primary > a {
   color: #ffffff; }
 
+.coop-list > li {
+  min-height: 416px; }
+
 .faq-list {
   padding: 0; }
   .faq-list li {
