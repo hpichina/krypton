@@ -2094,14 +2094,19 @@ h3.with-line {
   .product-list > li {
     min-height: 436px; } }
 
-.faq-list li {
-  padding: 10px 0; }
-  .faq-list li p {
-    display: none; }
-  .faq-list li h4 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    cursor: pointer; }
+.btn-primary > a {
+  color: #ffffff; }
+
+.faq-list {
+  padding: 0; }
+  .faq-list li {
+    padding: 10px 0; }
+    .faq-list li p {
+      display: none; }
+    .faq-list li h4 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      cursor: pointer; }
 
 .search-box {
   padding: 15px;
