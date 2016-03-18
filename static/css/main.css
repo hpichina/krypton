@@ -1968,12 +1968,13 @@ a {
 
 .page-block {
   padding-top: 30px;
-  padding-bottom: 30px;
   position: relative; }
   .page-block p {
     margin: 2em 0; }
   .page-block .block-action {
     text-align: center; }
+  .page-block + .page-block {
+    padding-top: 0; }
 
 .page-block--lg {
   padding: 60px 0; }
@@ -1993,14 +1994,6 @@ ul, ul li {
 h3.with-line {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px; }
-
-.coop-list > li {
-  min-height: 400px; }
-
-.anti-page-block {
-  padding-top: 30px;
-  padding-bottom: -30px;
-  margin-bottom: -30px; }
 
 .view-filters {
   display: none; }

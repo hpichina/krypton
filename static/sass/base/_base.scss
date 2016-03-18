@@ -12,13 +12,15 @@ a {
 
 .page-block {
   padding-top: 30px;
-  padding-bottom: 30px;
   position: relative;
   p {
     margin: 2em 0;
   }
   .block-action{
     text-align: center;
+  }
+  + .page-block {
+    padding-top: 0;
   }
 }
 
@@ -47,21 +49,9 @@ h3.with-line {
   padding-bottom: 10px;
 }
 
-.coop-list > li {
-  min-height: 400px;
-}
-
-.anti-page-block {
-    padding-top: 30px;
-    padding-bottom: -30px;
-    margin-bottom: -30px;
-}
-
 .view-filters {
     display: none;
 }
-
-
 
 @media (min-width: $tablet) {
   .page-block {

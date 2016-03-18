@@ -1,17 +1,15 @@
-<section class="recommend-product">
-    <div class="container page-block">
-        <div class="head">
-            <h3>
-                {% block icon %}<i class="icon-home"></i>{% endblock %}
-                <span>{{ label }}</span>
-            </h3>
-        </div>
-        {{ content }}
-        <div class="text-center">
-            {% block footer_link %}{% endblock %}
-        </div>
-        <div class="block-action">
-            {% block header_link %}{% endblock %}
-        </div>
+<section class="recommend-product container page-block">
+    <div class="head">
+        <h3>
+            {% block icon %}<i class="icon-home"></i>{% endblock %}
+            <span>{{ label }}</span>
+        </h3>
+    </div>
+    {{ content }}
+    <div class="text-center">
+        {% block footer_link %}{% endblock %}
+    </div>
+    <div class="block-action">
+        {% block header_link %}{% endblock %}
     </div>
 </section>
