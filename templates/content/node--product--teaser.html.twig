@@ -1,7 +1,19 @@
-{{ content.field_image }}
-<h4>
-    <a href="{{ node.uri.value }}">{{ label }}</a>
-</h4>
-{{ content.field_coop_reference }}
-{{ content.body }}
-
+<li class="col-md-3 col-sm-6 col-xs-12">
+    {{ content.field_image }}
+    <h4>
+        <a href="{{ node.uri.value }}">
+            {% if node.title.0.value | length > 20 %}
+                {{ node.title.0.value | slice(0, 20) }}...
+            {% else %}
+                {{ node.title.0.value }}
+            {% endif %}
+        </a>
+    </h4>
+    <p>
+        {% if node.body.0.value | length > 60 %}
+            {{ node.body.0.value | replace({'<p>': '', '</p>': ''}) | slice(0, 60) }}...
+        {% else %}
+            {{ node.body.0.value | replace({'<p>': '', '</p>': ''}) }}
+        {% endif %}
+    </p>
+</li>

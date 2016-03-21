@@ -22,10 +22,10 @@ function krypton_preprocess_node(&$variables){
         ->condition('type', 'coop')
         ->execute();
     
-    $variables["test_result"] = array();
+    $variables["products_in_coops"] = array();
     
     foreach ($coop_ids as $coop_id) {
-        $variables["test_result"][$coop_id] = query_products_by_coop_id($coop_id);
+        $variables["products_in_coops"][$coop_id] = query_products_by_coop_id($coop_id);
     }
     
 //   

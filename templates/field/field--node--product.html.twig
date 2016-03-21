@@ -1,5 +1,7 @@
-<h3 class="with-line">
-    <i class="icon-book-open"></i>
-    <span>{{ label }}</span>
-</h3>
+{% if not label_hidden %}
+    <h3 class="with-line">
+        <i class="icon-book-open"></i>
+        <span>{{ label }}</span>
+    </h3>
+{% endif %}
 {{ items }}
