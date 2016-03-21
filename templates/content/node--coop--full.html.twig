@@ -14,7 +14,11 @@
             </div>
         </div>
         <div id="product" class="detail-block">
-            {{ content.coop_products }}
+            <div class="row">
+            <ul class="product-list image-list">
+                <li class="col-md-3 col-sm-6 col-xs-12">{{ test_result[node.nid.0.value] }}</li>
+            </ul>
+        </div>
         </div>
         <div id="detail" class="detail-block">
             {{ content.body }}
@@ -24,5 +28,3 @@
         </div>
     </div>
 </section>
-
-{{ product_query }}

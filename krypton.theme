@@ -3,11 +3,31 @@
  * @file
  * krypton theme implementation file.
  */
+ 
+function query_products_by_coop_id($id) {
+    $ids = \Drupal::entityQuery('node')
+        ->condition('type', 'product')
+        ->condition('field_coop_reference.target_id', $id)
+        ->range(0, 4)
+        ->execute();
+    $node_storage = \Drupal::entityManager()->getStorage('node');
+    $nodes = $node_storage->loadMultiple($ids);
+    
+    return \Drupal::entityManager()->getViewBuilder('node')->viewMultiple($nodes, 'teaser');
+}
 
 function krypton_preprocess_node(&$variables){
-//   $stuff  = views_embed_view('recommend_products', 'embed_1', 28);
-//   $variables["my_view"] = drupal_render($stuff);
-  
-//   $query = \Drupal::entityQuery('node')->condition('#type', 'product')->execute();
+    
+    $coop_ids = \Drupal::entityQuery('node')
+        ->condition('type', 'coop')
+        ->execute();
+    
+    $variables["test_result"] = array();
+    
+    foreach ($coop_ids as $coop_id) {
+        $variables["test_result"][$coop_id] = query_products_by_coop_id($coop_id);
+    }
+    
+//   
 //   $variables["product_query"] = $query;
 }
