@@ -43,8 +43,11 @@
   }
 }
 
-// @media (max-width: $tablet) {
-//   .image-list {
-//     text-align: center;
-//   }
-// }
+@media (max-width: $tablet) {
+  .image-list {
+    text-align: center;
+    p {
+      text-align: left;
+    }
+  }
+}
