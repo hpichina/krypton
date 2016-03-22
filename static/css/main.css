@@ -2060,10 +2060,6 @@ h3.with-line {
   .image-list li:nth-child(odd) {
     clear: left; } }
 
-@media (max-width: 768px) {
-  .image-list {
-    text-align: center; } }
-
 .story-list .image-wrapper {
   background-image: url("../images/bee-1.png");
   background-repeat: no-repeat;
