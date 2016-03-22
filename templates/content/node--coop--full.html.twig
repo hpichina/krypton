@@ -1,6 +1,20 @@
 <section class="hero-banner" style="background-image: url('{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}');">
   <div class="container">
-    {{ content.field_page_banner_text }}
+    {% if node.title.0.value | length < 30 %}
+        <h1>{{ node.title.0.value }}</h1>
+    {% elseif node.title.0.value | length < 40 %}
+        <h2>{{ node.title.0.value }}</h2>
+    {% elseif node.title.0.value | length < 50 %}
+        <h3>{{ node.title.0.value }}</h3>
+    {% elseif node.title.0.value | length < 60 %}
+        <h4>{{ node.title.0.value }}</h4>
+    {% else %}
+        <p>{{ node.title.0.value }}</p>
+    {% endif %}
+    <small>
+        <i class="icon-location"></i>
+        <span>{{ node.field_coop_address.0.value }}</span>
+    </small>
   </div>
 </section>
 

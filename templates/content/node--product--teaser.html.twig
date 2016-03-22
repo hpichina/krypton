@@ -1,7 +1,7 @@
 <li class="col-md-3 col-sm-6 col-xs-12">
     {{ content.field_image }}
     <h4>
-        <a href="{{ node.uri.value }}">
+        <a href="/nodes/{{ node.nid.value }}">
             {% if node.title.0.value | length > 20 %}
                 {{ node.title.0.value | slice(0, 20) }}...
             {% else %}
