@@ -23,14 +23,25 @@ function highlight(type, id) {
                     var href = a.attr('href');
                     if(id === '') {
                         var query = parseQuery(href);
-                        if(JSON.stringify(query) === '{}') {
-                            a.removeClass('btn-default');
-                            a.addClass('btn-warning');
-                        }
+                        if(JSON.stringify(query) !== '{}') { return; }
                     }
-                    else if(a.attr('href').endsWith(id)) {
-                        a.removeClass('btn-default');
-                        a.addClass('btn-warning');
+                    else if(!href.endsWith(id)) { return; }
+                    a.removeClass('btn-default');
+                    a.addClass('btn-warning');
+                });
+            break;
+            
+        case 'products': 
+            var main_menu = $('#main-menu');
+            if(!main_menu) break;
+            main_menu
+                .find('li')
+                .toArray()
+                .map(function(li) { return $(li).find('a'); })
+                .forEach(function(a) {
+                    var href = a.attr('href');
+                    if(href.indexOf('product') >= 0) {
+                        a.addClass('is-active');
                     }
                 });
             break;
