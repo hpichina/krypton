@@ -49,10 +49,11 @@
         <div class="col-md-offset-9 col-md-2 col-xs-12 text-right">
             <div class="btn-group">
                 <button id="coop-region-dropdown" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    全部地区 <span class="icon-down-dir"></span>
+                    <span id="current-coop-region">全部地区</span>
+                    <span class="icon-down-dir"></span>
                 </button>
                 <ul id="coop-region-list" class="dropdown-menu">
-                    <li><a href="/coops">全部地区</a></li>
+                    <li><a href="/coops/all">全部地区</a></li>
                     {% for row in content["view_build"]["#rows"][0]["#rows"] %}
                         <li>
                             {{ row }}
@@ -63,4 +64,13 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(function() {
+        if(location.pathname.endsWith('all')) {
+            highlight('coop-region', location.search);
+        }
+        highlight('coops', location.search);
+    });
+</script>
     

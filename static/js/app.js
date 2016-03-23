@@ -45,6 +45,40 @@ function highlight(type, id) {
                     }
                 });
             break;
+            
+        case 'coop-region':
+            var coop_region_list = $('#coop-region-list');
+            if(!coop_region_list) break;
+            coop_region_list
+                .find('li')
+                .toArray()
+                .map(function(li) { return $(li).find('a'); })
+                .forEach(function(a) {
+                    var href = a.attr('href');
+                    if(id === '') {
+                        var query = parseQuery(href);
+                        if(JSON.stringify(query) !== '{}') { return; }
+                    }
+                    else if(!href.endsWith(id)) { return; }
+                    a.addClass('btn-warning');
+                    $('#current-coop-region').text(a.text());
+                });
+            break;
+            
+        case 'coops': 
+            var main_menu = $('#main-menu');
+            if(!main_menu) break;
+            main_menu
+                .find('li')
+                .toArray()
+                .map(function(li) { return $(li).find('a'); })
+                .forEach(function(a) {
+                    var href = a.attr('href');
+                    if(href.indexOf('coop') >= 0) {
+                        a.addClass('is-active');
+                    }
+                });
+            break;
     }
 }
 
