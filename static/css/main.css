@@ -2062,9 +2062,7 @@ h3.with-line {
 
 @media (max-width: 768px) {
   .image-list {
-    text-align: center; }
-    .image-list p {
-      text-align: left; } }
+    text-align: left; } }
 
 .story-list .image-wrapper {
   background-image: url("../images/bee-1.png");
