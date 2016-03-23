@@ -4,7 +4,6 @@
             {{ title }}
         </a>
     <h4>
-    <small>类型：{{ result.type }}</small>
     {% if result.node.body.0.value | length > 0 %}
         <p>{{ result.node.body.0.value | trim | raw }}</p>
     {% else %}
