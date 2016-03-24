@@ -4,14 +4,13 @@
             {% block icon %}<i class="icon-home"></i>{% endblock %}
             <span>{{ label }}</span>
         </h3>
-        {% block header_link %}{% endblock %}
     </div>
     {{ content }}
     <div class="text-center">
         {% block footer_link %}{% endblock %}
     </div>
     <div class="block-action">
-        {% block whatever_link %}{% endblock %}
+        {% block header_link %}{% endblock %}
     </div>
 </section>
 

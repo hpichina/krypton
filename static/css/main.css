@@ -1967,14 +1967,11 @@ a {
   cursor: pointer; }
 
 .page-block {
-  padding-top: 30px;
   position: relative; }
   .page-block p {
     margin: 2em 0; }
   .page-block .block-action {
     text-align: center; }
-  .page-block + .page-block {
-    padding-top: 0; }
 
 .page-block--lg {
   padding: 60px 0; }
@@ -2001,11 +1998,14 @@ h3.with-line {
 .view-filters {
   display: none; }
 
+.hero-banner {
+  margin-bottom: 30px; }
+
 @media (min-width: 768px) {
   .page-block .block-action {
     position: absolute;
     right: 15px;
-    top: 44px; } }
+    top: 16px; } }
 
 /* components */
 .nav {
