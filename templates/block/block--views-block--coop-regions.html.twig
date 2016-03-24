@@ -48,11 +48,11 @@
     <div class="row">
         <div class="col-md-offset-9 col-md-2 col-xs-12 text-right">
             <div class="btn-group">
-                <button id="coop-region-dropdown" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span id="current-coop-region">全部地区</span>
+                <button id="region-dropdown" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="current-region">全部地区</span>
                     <span class="icon-down-dir"></span>
                 </button>
-                <ul id="coop-region-list" class="dropdown-menu">
+                <ul id="region-list" class="dropdown-menu">
                     <li><a href="/coops/all">全部地区</a></li>
                     {% for row in content["view_build"]["#rows"][0]["#rows"] %}
                         <li>

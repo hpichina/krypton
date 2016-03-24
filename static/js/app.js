@@ -5,8 +5,8 @@ $(document).ready(function() {
     $('#hide-wechat-link').click(function() {
         $('#weiLayer').hide();
     });
-    $('#coop-region-dropdown').click(function() {
-        $('#coop-region-list').toggle();
+    $('#region-dropdown').click(function() {
+        $('#region-list').toggle();
     });
 });
 
@@ -47,9 +47,10 @@ function highlight(type, id) {
             break;
             
         case 'coop-region':
-            var coop_region_list = $('#coop-region-list');
-            if(!coop_region_list) break;
-            coop_region_list
+        case 'product-region':
+            var region_list = $('#region-list');
+            if(!region_list) break;
+            region_list
                 .find('li')
                 .toArray()
                 .map(function(li) { return $(li).find('a'); })
@@ -61,7 +62,7 @@ function highlight(type, id) {
                     }
                     else if(!href.endsWith(id)) { return; }
                     a.addClass('btn-warning');
-                    $('#current-coop-region').text(a.text());
+                    $('#current-region').text(a.text());
                 });
             break;
             
