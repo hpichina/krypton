@@ -5,8 +5,12 @@ $(document).ready(function() {
     $('#hide-wechat-link').click(function() {
         $('#weiLayer').hide();
     });
-    $('#region-dropdown').click(function() {
-        $('#region-list').toggle();
+    $(document).click((event) => {
+        if($(event.target).closest('.region-selector').length > 0) {
+            $('#region-list').toggle();
+        } else {
+            $('#region-list').hide();
+        }
     });
 });
 
