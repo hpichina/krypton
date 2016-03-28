@@ -1,3 +1,15 @@
+if (!String.prototype.endsWith) {
+  String.prototype.endsWith = function(searchString, position) {
+      var subjectString = this.toString();
+      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+        position = subjectString.length;
+      }
+      position -= searchString.length;
+      var lastIndex = subjectString.indexOf(searchString, position);
+      return lastIndex !== -1 && lastIndex === position;
+  };
+}
+
 $(document).ready(function() {
     $('#wechat-link').click(function() {
         $('#weiLayer').show();
@@ -5,7 +17,7 @@ $(document).ready(function() {
     $('#hide-wechat-link').click(function() {
         $('#weiLayer').hide();
     });
-    $(document).click((event) => {
+    $(document).click(function(event) {
         if($(event.target).closest('.region-selector').length > 0) {
             $('#region-list').toggle();
         } else {
@@ -86,6 +98,26 @@ function highlight(type, id) {
             break;
     }
 }
+
+// function initLink() {
+//     if(location.search === '') return;
+//     var query = parseQuery(location.search);
+    
+//     var product_types = $('#product-types');
+//     if(type in query && product_types.length > 0) {
+//         product_types
+//             .find('li')
+//             .toArray()
+//             .map(function(li) { return $(li).find('a'); })
+//             .forEach(function(a) {
+//                 var href = a.attr('href');
+                
+//             });
+//     }
+    
+//     var 
+    
+// }
 
 function parseQuery(query) {
     var res = {};
