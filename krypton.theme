@@ -71,11 +71,14 @@ function krypton_preprocess_search_result(&$variables) {
   
   foreach ($variables['result']['node'] as $key => $value) {
       
-      if(!in_array($key, ['title'])) {
-          $inner_value = $value[0]->value;
-          if(is_string($inner_value) && strpos($inner_value, $keyword) !== false) {            
-              $matched_fields[$key] = $inner_value;
+      if(!in_array($key, ['title']) && isset($value)) {
+          if(is_object($value[0])) {
+              $inner_value = $value[0]->value;
+              if(is_string($inner_value) && strpos($inner_value, $keyword) !== false) {            
+                  $matched_fields[$key] = $inner_value;
+              }
           }
+          
       }
   }
   $variables['matched_fields'] = $matched_fields;
