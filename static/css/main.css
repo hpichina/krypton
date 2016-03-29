@@ -2132,6 +2132,10 @@ h3.with-line {
     position: absolute;
     top: 20px; }
 
+.highlight {
+  color: #001513;
+  background-color: yellow; }
+
 @media (max-width: 768px) {
   .search-box {
     padding-top: 0; }

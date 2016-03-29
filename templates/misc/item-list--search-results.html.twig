@@ -1,4 +1,4 @@
-<div class="container page-block">
+<div id="list-search-result" class="container page-block">
     <ul>
         {% for item in items %}
             <li>{{ item }}</li>
@@ -6,3 +6,10 @@
         {% endfor %}
     </ul>
 </div>
+<script>
+    $(function() {
+        var term = decodeURI(parseQuery(location.search).keys);
+        console.log(term);
+        if(term) highlightSearchTerms(term);
+    });
+</script>

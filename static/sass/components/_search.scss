@@ -28,7 +28,10 @@
   }
 }
 
-
+.highlight {
+    color: #001513;
+    background-color: yellow;
+}
 
 @media (max-width: $tablet) {
   .search-box {
