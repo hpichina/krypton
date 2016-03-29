@@ -13,9 +13,14 @@
         }
         .user-login-form .form-item input {
             color: black;
+            width: 300px;
+        }
+        .user-login-form .form-item label {
+            display: inline-block;
+            width: 50px;
         }
         .user-login-form #edit-submit {
-            margin-left: 100px;
+            margin-left: 150px;
             color: #333333;
             background-color: #ffffff;
             border-color: #cccccc;
@@ -48,7 +53,7 @@
     <section class="hero-banner" style="background-image: url('/themes/krypton/static/images/banner-1.jpg');">
         <div class="container">
             {{ page.content }}
-            <a href="/user/password" class="btn btn-default" style="margin-right: 100px; margin-top: -60px;">重置密码</a>
+            <a href="/user/password" class="btn btn-default" style="margin-right: 50px; margin-top: -60px;">重置密码</a>
         </div>
     </section>
 {% endblock %}
