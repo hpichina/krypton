@@ -5,6 +5,7 @@ main:
             static/css/main.css: {}
     js:
         node_modules/jquery/dist/jquery.min.js: {}
+        "node_modules/jquery-placeholder/jquery.placeholder.js": {}
         static/js/main.js: {}
         static/js/app.js: {}
         
