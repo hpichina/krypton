@@ -1,10 +1,17 @@
-<article class="search-result-item" style="margin-bottom: 20px">
-    <h4>
-        <a {% if url %}href="{{ url }}"{% endif %}>
-            {{ title }}
-        </a>
-    <h4>
-    {% for field in matched_fields %}
-        <div>{{ field | raw }}</div>
-    {% endfor %}
-</article>
+{% if valid %}
+<li>
+    <article class="search-result-item" style="margin-bottom: 20px">
+        <h4>
+            <a {% if url %}href="{{ url }}"{% endif %}>
+                {{ title }}
+            </a>
+        <h4>
+        {% for key, field in matched_fields %}
+            <div>{{ field | raw }}</div>
+        {% else %}
+            <div>{{ original_body | raw }}</div>
+        {% endfor %}
+    </article>
+</li>
+<hr style="border-color: #e5e5e5">
+{% endif %}
