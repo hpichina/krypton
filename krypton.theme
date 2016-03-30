@@ -66,6 +66,7 @@ function krypton_preprocess_search_result(&$variables) {
   $current_url = \Drupal::request()->getRequestUri();
   $query = explode('?', $current_url)[1];
   $keyword = urldecode(explode('=', $query)[1]);
+  $keywords = explode(' ', $keyword);
    
   $matched_fields = array();
   
@@ -74,8 +75,11 @@ function krypton_preprocess_search_result(&$variables) {
       if(!in_array($key, ['title']) && isset($value)) {
           if(is_object($value[0])) {
               $inner_value = $value[0]->value;
-              if(is_string($inner_value) && strpos($inner_value, $keyword) !== false) {            
-                  $matched_fields[$key] = $inner_value;
+              foreach ($keywords as $keyword_key => $keyword_value) {
+                  if(is_string($inner_value) && strpos($inner_value, $keyword_value) !== false) {            
+                    $matched_fields[$key] = $inner_value;
+                    break;
+                }
               }
           }
           

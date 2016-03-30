@@ -238,7 +238,6 @@ function highlightSearchTerms(searchText, treatAsPhrase, warnOnFailure, highligh
   }
   
   var range = $('#list-search-result');
-  console.log(range);
   if (!range || range.length <= 0) {
     return false;
   }

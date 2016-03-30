@@ -1,15 +1,17 @@
 <div id="list-search-result" class="container page-block">
     <ul>
         {% for item in items %}
-            <li>{{ item }}</li>
+            <li>{{ item.value }}</li>
+            
             <hr style="border-color: #e5e5e5">
         {% endfor %}
     </ul>
 </div>
+
 <script>
     $(function() {
         var term = decodeURI(parseQuery(location.search).keys);
-        console.log(term);
-        if(term) highlightSearchTerms(term);
+        terms = term.split('+');
+        terms.forEach(function(t) { if(t) highlightSearchTerms(t); });
     });
 </script>
