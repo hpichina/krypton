@@ -1,9 +1,17 @@
-{% extends "block--views-block--products-base.html.twig" %}
-
-{% block icon %}
-    <i class="icon-basket"></i>
-{% endblock %}
-
-{% block footer_link %}
-    <a class="btn btn-primary btn-lg" href="/products/overview">查看更多</a>
-{% endblock %}
+<section class="product-lists container page-block detail-block">
+    <div class="head">
+        <h3>
+            {% block icon %}<i class="icon-basket"></i>{% endblock %}
+            <span>{{ label }}</span>
+        </h3>
+    </div>
+    {{ content }}
+    <div class="text-center">
+        {% block footer_link %}
+            <a class="btn btn-primary btn-lg" href="/products/overview">查看更多</a>
+        {% endblock %}
+    </div>
+    <div class="block-action">
+        {% block header_link %}{% endblock %}
+    </div>
+</section>

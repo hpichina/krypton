@@ -1,0 +1,6 @@
+<a href="{{ url }}" style="background-image: url('{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}');">
+    <img style="width: 100%; max-height: 460px;" src="{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}">
+    <div class="carousel-caption">
+        {{ content.field_page_banner_text }}
+    </div>
+</a>

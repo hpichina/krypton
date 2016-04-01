@@ -1,8 +1,10 @@
-<section class="hero-banner" style="background-image: url('{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}');">
-  <div class="container">
-    {{ content.field_page_banner_text }}
-  </div>
-</section>
+{% if node.field_page_banner_text.0.value | length > 0 %}
+    <section class="hero-banner" style="background-image: url('{{ file_url(node.field_page_banner_image.0.entity.uri.value) }}');">
+    <div class="container">
+        {{ content.field_page_banner_text }}
+    </div>
+    </section>
+{% endif %}
 
 <article{{ attributes }}>
 
