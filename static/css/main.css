@@ -2439,6 +2439,41 @@ footer {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px; }
 
+.user-logged-in #toolbar-bar {
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.user-logged-in #toolbar-bar:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.user-logged-in .tabs {
+  position: fixed;
+  left: 0;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00aea1;
+  border-left-width: 0;
+  border-radius: 0 5px 5px 0;
+  font-size: 1.1em;
+  padding: 0; }
+  .user-logged-in .tabs ul {
+    padding: 0;
+    margin: 0; }
+  .user-logged-in .tabs li {
+    padding: 10px 30px;
+    border-top: 1px solid #00aea1;
+    text-align: center; }
+    .user-logged-in .tabs li:first-child {
+      border-top: none; }
+    .user-logged-in .tabs li a {
+      display: block; }
+
+.user-logged-in .tabs:hover {
+  background-color: black; }
+
 /* pages */
 .product-map img {
   max-width: 100%; }

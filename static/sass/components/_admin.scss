@@ -1,0 +1,41 @@
+.user-logged-in {
+  #toolbar-bar {
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  #toolbar-bar:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .tabs {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00aea1;
+    border-left-width: 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1em;
+    padding: 0;
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      padding: 10px 30px;
+      border-top: 1px solid #00aea1;
+      text-align: center;
+      &:first-child {
+        border-top: none;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+  .tabs:hover {
+    background-color: rgba(0, 0, 0, 1);  
+  }
+}
